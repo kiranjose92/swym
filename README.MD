@@ -29,7 +29,7 @@ Similarly [33C3D] - means play C thrice, D thrice and repeat this thrice.
 ### Prerequisites
 Need to install the following to congigure the application
 * PHP >= 7.1
-* (wavmerge)[http://manpages.ubuntu.com/manpages/impish/man1/wavmerge.1.html] command line tool. use the following command to install it in Ubuntu:
+* [wavmerge](http://manpages.ubuntu.com/manpages/impish/man1/wavmerge.1.html) command line tool. use the following command to install it in Ubuntu:
  ```
   sudo apt install wavbreaker
  ```
@@ -37,9 +37,13 @@ Need to install the following to congigure the application
 
 ### API
 Detaiils of the API that takes in notes arrangement and returns a file with those notes played:
+
 **Endpoint:** `/notetomusic.php`
+
 **HTTP Method:** `POST`
+
 **Request Header:** `Content-Type:application/json`
+
 **Sample Payload:** 
 ```
 {
