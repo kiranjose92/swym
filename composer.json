@@ -1,1 +1,6 @@
-{}
+{
+	"name": "kiranjose92/swym",
+    "type": "project",
+    "description": "Instrument as a service.",
+	"license": "MIT"
+}
