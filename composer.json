@@ -1,6 +1,10 @@
 {
 	"name": "kiranjose92/swym",
-    "type": "project",
-    "description": "Instrument as a service.",
-	"license": "MIT"
+	"type": "project",
+	"description": "Instrument as a service.",
+	"license": "MIT",
+	
+	"require": {
+    	"php": "^7.2.0"
+  	}
 }
