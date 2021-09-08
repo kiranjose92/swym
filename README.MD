@@ -7,6 +7,7 @@ Currently the API supports only the following piano notes:
 'A', 'B', 'B#', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#','G', 'G#'
 ```
 
+
 ### Implementation
 The notes arrangement format would be an array of notes with each note/sequence prefixed by the repetition count. For example (Assume all elements in the array are String)
 If your API is called with [2C, E#, D, 3DEC], It should return a wav/mp3 file or a link to the file which plays the notes as per the input. ie. 
@@ -25,9 +26,8 @@ If you get [333C] - it means C is played 33 times and then repeated 3 times - pl
 Similarly [33C3D] - means play C thrice, D thrice and repeat this thrice. 
 
 
-
 ### Prerequisites
-Need to install the following to congigure the application
+Need to install the following to configure the application:
 * PHP >= 7.1
 * [wavmerge](http://manpages.ubuntu.com/manpages/impish/man1/wavmerge.1.html) command line tool. use the following command to install it in Ubuntu:
  ```
@@ -50,3 +50,6 @@ Detaiils of the API that takes in notes arrangement and returns a file with thos
     "notes": ["2C", "B#",  "A"]
 }
 ```
+
+
+**The application is hosted in Heroku - https://pure-river-31945.herokuapp.com and the API URL is:** `https://pure-river-31945.herokuapp.com/notetomusic.php`
