@@ -56,11 +56,17 @@
         $wholeNoteFiles = setNoteFilesToMerge($noteFileSet, $repeatWhole, $wholeNoteFiles);
     }
 
-    // Name of the final audio file
-    $outputFile = time() . '-merged.wav';
+    $wholeNotes = explode(' ',trim($wholeNoteFiles));
+    if (count($wholeNotes) == 1) {
+        // Name of the final audio file
+        $outputFile = $wholeNotes[0];
+    } else {
+        // Name of the final audio file
+        $outputFile = time() . '-merged.wav';
     
-    // Run the shell command to merge audio files of the full note set
-    shell_exec('cd ' . getcwd() . '/' . NOTES_FOLDER .'; wavmerge -o  ' . $outputFile . ' ' . $wholeNoteFiles);
+        // Run the shell command to merge audio files of the full note set
+        shell_exec('cd ' . getcwd() . '/' . NOTES_FOLDER .'; wavmerge -o  ' . $outputFile . ' ' . $wholeNoteFiles);
+    }
 
     $track = getcwd() . '/' . NOTES_FOLDER . '/' . $outputFile;
     
